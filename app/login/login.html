@@ -1,8 +1,30 @@
 <div class="login-wrapper">
 	<div class="login-sidebar">
-
+		<div class="logo">
+            <p>
+                <img src="assets/img/talenta-white.png" alt="">
+            </p>
+        </div>
 	</div>
 	<div class="login-form">
-		
+		<div class="form-user">
+            <h1 class="title">Welcome to Vendor Dashboard</h1>
+            <h3>Enter Your Email & Password.</h3>
+            <form [ngFormModel]="loginForm" (submit)="onSubmit($event,email.value,password.value)" class="form-horizontal">
+                <div class="row">
+                    <div class="form-group col-md-4 col-sm-6">
+                        <label for="email">EMAIL</label>
+                        <input class="form-control" [ngFormControl]="loginForm.controls['email']" #email type="text" placeholder="Enter Your Email">
+                    </div>
+                    <div class="form-group col-md-4 col-sm-6">
+                        <label for="password">PASSWORD</label>
+                        <input class="form-control" [ngFormControl]="loginForm.controls['password']" #password type="password" placeholder="Enter Your Password">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <button type="submit" [disabled]="!loginForm.valid" class="btn btn-default">SUBMIT</button>
+                    </div>                                         
+                </div>
+            </form>
+        </div>
 	</div>
 </div>

@@ -1,0 +1,20 @@
+@mixin transition($tr){
+	transition: $tr;
+	-webkit-transition: $tr;
+	-moz-transition: $tr;
+	-o-transition: $tr;
+	-ms-transition: $tr;
+}
+
+@mixin transform ($trf){
+	transform: $trf;
+	-webkit-transform: $trf;
+	-moz-transform: $trf;
+	-o-transform: $trf;
+	-ms-transform: $trf;
+}
+
+@font-face{
+	font-family: Lato-Light;
+	src: url('../fonts/Lato-Light.ttf');
+}
