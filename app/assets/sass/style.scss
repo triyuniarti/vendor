@@ -152,7 +152,7 @@ body{
     }
 }
 
-#card{
+#courses{
     .title{
         float: left;
         color: #777;
@@ -175,7 +175,7 @@ body{
 }
 
 // Package etc.
-#card-content{
+#courses-content{
     .panel.panel-default{
         border-radius:0;
         border-width:3px;
@@ -224,6 +224,10 @@ body{
             }
         }
     }
+}
+
+hr {
+  border-width: 2px;
 }
 
 // Login

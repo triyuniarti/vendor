@@ -108,10 +108,10 @@ body {
       line-height: 2em;
       text-align: justify; }
 
-#card .title {
+#courses .title {
   float: left;
   color: #777; }
-#card .btn.btn-default {
+#courses .btn.btn-default {
   margin-left: 15px;
   margin-top: 15px;
   border-width: 2px;
@@ -122,13 +122,13 @@ body {
   -moz-transition: all 0.15s ease-in-out;
   -o-transition: all 0.15s ease-in-out;
   -ms-transition: all 0.15s ease-in-out; }
-  #card .btn.btn-default:hover {
+  #courses .btn.btn-default:hover {
     background-color: transparent;
     box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.3); }
-#card hr {
+#courses hr {
   border-width: 2px; }
 
-#card-content .panel.panel-default {
+#courses-content .panel.panel-default {
   border-radius: 0;
   border-width: 3px;
   border-color: #6B0000;
@@ -138,28 +138,28 @@ body {
   -moz-transition: all 0.15s ease-in-out;
   -o-transition: all 0.15s ease-in-out;
   -ms-transition: all 0.15s ease-in-out; }
-  #card-content .panel.panel-default .panel-heading {
+  #courses-content .panel.panel-default .panel-heading {
     background-color: #6B0000;
     border-radius: 0; }
-    #card-content .panel.panel-default .panel-heading h5 {
+    #courses-content .panel.panel-default .panel-heading h5 {
       color: #fff; }
-    #card-content .panel.panel-default .panel-heading .btn.btn-default {
+    #courses-content .panel.panel-default .panel-heading .btn.btn-default {
       background-color: transparent;
       color: #fff;
       border: none; }
-  #card-content .panel.panel-default .list-group-item {
+  #courses-content .panel.panel-default .list-group-item {
     border-top-width: 3px;
     border-color: #6B0000; }
-#card-content form input {
+#courses-content form input {
   border: none;
   border-radius: 0;
   box-shadow: none;
   border-bottom: solid 1px #777; }
-#card-content form textarea {
+#courses-content form textarea {
   resize: none;
   border-color: #777;
   border-radius: 0; }
-#card-content form .btn.btn-default {
+#courses-content form .btn.btn-default {
   margin-left: 15px;
   margin-top: 15px;
   border-width: 2px;
@@ -170,9 +170,12 @@ body {
   -moz-transition: all 0.15s ease-in-out;
   -o-transition: all 0.15s ease-in-out;
   -ms-transition: all 0.15s ease-in-out; }
-  #card-content form .btn.btn-default:hover {
+  #courses-content form .btn.btn-default:hover {
     background-color: transparent;
     box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.3); }
+
+hr {
+  border-width: 2px; }
 
 .login-wrapper {
   position: absolute;

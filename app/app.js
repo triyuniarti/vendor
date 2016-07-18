@@ -4,11 +4,13 @@
 angular.module('app', [
   'ngRoute',
   'app.login',
+  'app.dashboard',
+  'app.courses',
   'app.view1',
   'app.view2'
 ])
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   /*$locationProvider.hashPrefix('!');*/
 
-  $routeProvider.otherwise({redirectTo: '/login'});
+  $routeProvider.otherwise({redirectTo: '/dashboard'});
 }]);

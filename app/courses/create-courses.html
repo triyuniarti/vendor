@@ -1,0 +1,43 @@
+<navbar-template></navbar-template>
+
+<div class="wrapper">
+	<div class="page-wrapper">
+		<div class="container">
+			<h3 class="title">Create Course</h3>
+			<hr />
+		</div>
+		<div class="container" id="courses-content">
+			<form>
+				<div class="row">
+					<div class="form-group col-md-4">
+						<label for="name">Course Name :</label>
+						<input type="text" class="form-control" name="name" id="name" placeholder="Enter Course Name"></input>
+					</div>
+					<div class="form-group col-md-4">
+						<label for="name">Course Price :</label>
+						<input type="text" class="form-control" name="price" id="price" placeholder="Enter Course Price"></input>
+					</div>
+					<div class="form-group col-md-4">
+						<label for="name">Category :</label>
+						<select class="form-control" name="category" id="category" style="border:none;border-bottom:solid 1px #000;border-radius:0;box-shadow:none;">
+							<option value="" >-- Please select a catogery --</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-12">
+						<label for="description">Description :</label>
+						<!-- <textarea name="description" id="description"></textarea> -->
+						<!-- <ckeditor name="description" id="description"></ckeditor> -->
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-6">
+						<button class="btn btn-default">Save</button>
+						<a href="#/courses" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
