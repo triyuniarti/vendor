@@ -5,6 +5,7 @@ angular.module('app', [
   'angular-jwt',
   'ngRoute',
   'ngCookies',
+  'app.navbar',
   'app.login',
   'app.dashboard',
   'app.courses',
@@ -42,6 +43,8 @@ angular.module('app', [
 		} else if ($cookies.get('')){
 			// redirect to login page if cookies 
 			$location.path('/login');
+			$cookies.remove('token');
+			$http.defaults.headers.common.Authorization = 'Bearer ';
 		}
 	});
 }]);
