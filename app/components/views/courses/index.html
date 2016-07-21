@@ -1,6 +1,6 @@
 <navbar-template></navbar-template>
 
-<div class="wrapper">
+<div class="wrapper" ng-controller="CoursesController">
 	<div class="page-wrapper">
 		<div class="container" id="courses">
 			<h3 class="title" style="display: inline-block; margin-right: 20px">Course List</h3>
@@ -20,9 +20,9 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>Building A Business with Zero Money</td>
-						<td>1000000.00</td>
+					<tr ng-repeat="course in courses">
+						<td>{{ course.name }}</td>
+						<td>{{ course.price }}</td>
 						<td style="text-align: center;">
 							<a href="#" class="btn btn-primary">
 								<span class="fa fa-pencil"></span>

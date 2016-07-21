@@ -10,18 +10,18 @@
 		<div class="form-user">
             <h1 class="title">Welcome to Vendor Dashboard</h1>
             <h3>Enter Your Email & Password.</h3>
-            <form class="form-horizontal" ng-submit="getLogin()">
+            <form class="form-horizontal" name="form" ng-submit="getLogin()">
                 <div class="row">
                     <div class="form-group col-md-4 col-sm-6">
                         <label for="email">EMAIL</label>
-                        <input class="form-control" ng-model="credentials.email" type="text" placeholder="Enter Your Email">
+                        <input class="form-control" ng-model="credentials.email" name="email" type="text" placeholder="Enter Your Email" required>
                     </div>
                     <div class="form-group col-md-4 col-sm-6">
                         <label for="password">PASSWORD</label>
-                        <input class="form-control" ng-model="credentials.password" type="password" placeholder="Enter Your Password">
+                        <input class="form-control" ng-model="credentials.password" name="password" type="password" placeholder="Enter Your Password" required>
                     </div>
                     <div class="form-group col-md-12">
-                        <button type="submit" class="btn btn-default">SUBMIT</button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-default">SUBMIT</button>
                     </div>                                         
                 </div>
             </form>

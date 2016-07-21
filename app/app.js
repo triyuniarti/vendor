@@ -4,6 +4,7 @@
 angular.module('app', [
   'angular-jwt',
   'ngRoute',
+  'ngAnimate',
   'ngCookies',
   'app.navbar',
   'app.login',
@@ -14,19 +15,19 @@ angular.module('app', [
   /*$locationProvider.hashPrefix('!');*/
 	$routeProvider
 		.when('/login', {
-			templateUrl: 'login/login.html',
+			templateUrl: './components/views/login/index.html',
 			controller: 'LoginController'
 		})
 		.when('/dashboard', {
-			templateUrl: 'dashboard/dashboard.html',
+			templateUrl: './components/views/dashboard/index.html',
 			controller: 'DashboardController'
 		})
 		.when('/courses', {
-			templateUrl: 'courses/list-courses.html',
+			templateUrl: './components/views/courses/index.html',
 			controller: 'CoursesController'
 		})
 		.when('/courses/create', {
-			templateUrl: 'courses/create-courses.html',
+			templateUrl: './components/views/courses/create.html',
 			controller: 'CoursesController'
 		})
   		.otherwise({redirectTo: '/dashboard'});
@@ -38,10 +39,10 @@ angular.module('app', [
 			$location.path('/login');
 		}else if ($cookies.get('token')) {
 			// redirect to login page
-			$http.defaults.headers.common['Authorization'] = 'Bearer ' + $cookies.get('token');
+			$http.defaults.headers.common.Authorization = 'Bearer ' + $cookies.get('token');
 			$location.path();
 		} else if ($cookies.get('')){
-			// redirect to login page if cookies 
+			// redirect to login page if cookies
 			$location.path('/login');
 			$cookies.remove('token');
 			$http.defaults.headers.common.Authorization = 'Bearer ';

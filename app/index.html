@@ -12,24 +12,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-
-  <!-- Bootstrap -->
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <!-- End of boostrap -->
-
   <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-toastr/dist/angular-toastr.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-  <script src="bower_components/ckeditor/ckeditor.js"></script>
 </head>
 <body>
-  <!-- <ul class="menu">
-    <li><a href="#!/login">Login</a></li>
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
-  </ul> -->
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -37,19 +26,24 @@
 
   <div ng-view></div>
 
-  
+
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
   <script src="bower_components/angular-jwt/dist/angular-jwt.min.js"></script>
   <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular-ckeditor/angular-ckeditor.min.js"></script>
   <script src="app.js"></script>
-  <script src="navbar/navbarController.js"></script>
-  <script src="login/loginController.js"></script>
-  <script src="dashboard/dashboardController.js"></script>
-  <script src="courses/coursesController.js"></script>
+  <script src="components/controllers/navbar.js"></script>
+  <script src="components/controllers/login.js"></script>
+  <script src="components/controllers/dashboard.js"></script>
+  <script src="components/controllers/courses.js"></script>
 </body>
 </html>

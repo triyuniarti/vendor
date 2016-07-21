@@ -9,6 +9,6 @@ angular.module('app.dashboard', ['ngRoute'])
 .directive('navbarTemplate', function() {
 	return {
 		restrict: 'E',
-		templateUrl: 'navbar/navbar.html'
+		templateUrl: '../../components/views/navbar/index.html'
 	};
 });

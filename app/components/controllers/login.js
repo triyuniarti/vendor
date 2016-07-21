@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('app.login', ['ngRoute'])
+angular.module('app.login', ['ngRoute', 'toastr'])
 
-.controller('LoginController', ['$http', '$scope', '$location', '$cookies', function($http, $scope, $location, $cookies) {
+.controller('LoginController', ['$http', '$scope', '$location', '$cookies', 'toastr', function($http, $scope, $location, $cookies, toastr) {
 	$scope.credentials = {};
 	$location.path('/dashboard');
 
@@ -15,7 +15,7 @@ angular.module('app.login', ['ngRoute'])
 			}
 		})
 		.error( function(response){
-			alert(response.message);
+			toastr.error(response.message);
 		});
 	}
 }]);
