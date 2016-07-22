@@ -32,6 +32,14 @@ angular.module('app', [
 		})
   		.otherwise({redirectTo: '/dashboard'});
 }])
+.controller('AppController', ['$cookies', 'jwtHelper', '$location', function ($cookies, jwtHelper, $location) {
+  var token = $cookies.get('token');
+  var expToken = jwtHelper.isTokenExpired(token);
+
+  if(expToken){
+    $location.path('/login');
+  }
+}])
 .run(['$rootScope', '$location', '$cookies', '$http', function ($rootScope, $location, $cookies, $http){
 	$rootScope.$on('$locationChangeStart', function (event, next, current) {
 		if (!$cookies.get('token')) {
