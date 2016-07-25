@@ -30,6 +30,10 @@ angular.module('app', [
 			templateUrl: './components/views/courses/create.html',
 			controller: 'CoursesController'
 		})
+    .when('/courses/update', {
+      templateUrl: './components/views/courses/update.html',
+      controller: 'CoursesController'
+    })
   		.otherwise({redirectTo: '/dashboard'});
 }])
 .controller('AppController', ['$cookies', 'jwtHelper', '$location', function ($cookies, jwtHelper, $location) {

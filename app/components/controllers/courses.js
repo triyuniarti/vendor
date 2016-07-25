@@ -3,7 +3,7 @@
 angular.module('app.courses', ['ngRoute'])
 
 .controller('CoursesController', ['$http', '$scope', 'toastr', '$location', function($http, $scope, toastr, $location) {
-      var url = 'http://128.199.255.96/v1/training/courses';
+      var url = 'http://128.199.255.96/v1/training/courses/';
 
       //get list courses from API
       $http({
@@ -39,11 +39,24 @@ angular.module('app.courses', ['ngRoute'])
         })
         .success(function(response) {
           $scope.data = response.data;
-          toastr.success(response.message);
+          toastr.success(response.message, 'Success');
           $location.path('/courses');
         })
         .error(function(response) {
           toastr.error(response.message);
+        });
+      }
+
+      //update courses
+      $scope.getCourseByID = function (id) {
+        $http({
+          method: 'GET',
+          url: url+id
+        })
+        .success(function (response) {
+            $scope.coursesById = response.data;
+        }).error(function (response) {
+            alert(response.message);
         });
       }
 
@@ -52,6 +65,13 @@ angular.module('app.courses', ['ngRoute'])
         $http({
           method: 'DELETE',
           url: url+id
+        })
+        .success(function (response) {
+          $scope.data = response.data;
+          toastr.success(response.message);
+        })
+        .error(function (response) {
+          toastr.error(response.message);
         });
       }
 }]);

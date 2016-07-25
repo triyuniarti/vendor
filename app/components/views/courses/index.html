@@ -24,10 +24,10 @@
 						<td>{{ course.name }}</td>
 						<td>{{ course.price }}</td>
 						<td style="text-align: center;">
-							<a href="#" class="btn btn-primary">
+							<a href="#/courses/update" ng-click="getCourseByID(course.id)" class="btn btn-primary">
 								<span class="fa fa-pencil"></span>
 							</a>
-							<a href="#" class="btn btn-danger">
+							<a href="#/courses" ng-click="deleteCourse(course.id)" class="btn btn-danger">
 								<span class="fa fa-trash"></span>
 							</a>
 						</td>

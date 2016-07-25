@@ -1,0 +1,46 @@
+<navbar-template></navbar-template>
+
+<div class="wrapper" ng-controller="CoursesController">
+	<div class="page-wrapper">
+		<div class="container">
+			<h3 class="title">Create Course</h3>
+			<hr />
+		</div>
+		<div class="container" id="courses-content" ng-if="getCourseByID">
+			<form ng-submit="createCourse()" name="form">
+				<div class="row">
+					<div class="form-group col-md-4">
+						<label for="name">Course Name :</label>
+						<input type="text" class="form-control" name="name" id="name" ng-model="getCourseByID.name"></input>
+					</div>
+					<div class="form-group col-md-4">
+						<label for="name">Course Price :</label>
+						<input type="text" class="form-control" name="price" id="price" ng-model="price" placeholder="Enter Course Price"></input>
+					</div>
+					<div class="form-group col-md-4">
+						<label for="name">Category :</label>
+						<select class="form-control" name="category" id="category" ng-model="category_id" style="border:none;border-bottom:solid 1px #000;border-radius:0;box-shadow:none;">
+							<option value="" >-- Please select a catogery --</option>
+							<option ng-repeat="category in categories" value="{{ category.id }}">
+								{{ category.name }}
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-12">
+						<label for="description">Description :</label>
+						<textarea class="form-control" ckeditor="description" name="description" id="description" ng-model="description"></textarea>
+						<!-- <ckeditor name="description" id="description"></ckeditor> -->
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-6">
+						<button type="submit"class="btn btn-default" ng-disabled="form.$invalid">Save</button>
+						<a href="#/courses" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
